@@ -10,10 +10,13 @@
 
   const heightRatio = 1
 
+  let mouseDown = false
+  document.body.addEventListener('mousedown', () => { mouseDown = true });
+  document.body.addEventListener('mouseup',   () => { mouseDown = false });
+
 
   let renderCanvas;
 
-  var angle = 1;
   var radius = 3; 
 
   var perspectiveCamera, controls, scene, renderer, stats;
@@ -115,9 +118,11 @@
   }
 
   function animate() {
-    perspectiveCamera.position.x = radius * Math.cos( angle );  
-    perspectiveCamera.position.z = radius * Math.sin( angle );
-    angle += 0.001;
+    if (!mouseDown) {
+      const angle = Math.acos(perspectiveCamera.position.x / radius) + 0.001
+      perspectiveCamera.position.x = radius * Math.cos( angle );  
+      perspectiveCamera.position.z = radius * Math.sin( angle )
+    }
 
     requestAnimationFrame( animate );
 
