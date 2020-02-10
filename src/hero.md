@@ -1,5 +1,3 @@
-# The S1 Project
-
 It still happens to me (after almost a decade of owning S4's) that I'm accidentally controlling the wrong deck (C/D instead of A/B) because I misread the deck switch button.
 
 The "toggle" style button doesn't allow you to build muscle memory and when things need to be done quickly this becomes a major pain in the ass (it should have been a big chunky flip-style toggle).

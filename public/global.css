@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Saira+Stencil+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Rubik+Mono+One&display=swap');
 
 html {
 	margin: 0;
@@ -17,21 +17,21 @@ body {
 	padding-top: 60vh;
 }
 
-* {
-	box-sizing: border-box;
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 h1, h2, h3, h5, h6 {
 	line-height: 1em;
-  font-family: 'Saira Stencil One', sans-serif;
+  font-family: 'Rubik Mono One', sans-serif;
 	font-weight: 780;
-	margin: 0 0 .25em 0;
+	margin: 0 0 .2em 0;
 	text-align: center;
-	text-decoration: underline;
 }
 
 h1 {
-	font-size: 4rem;
+	font-size: 5rem;
+	letter-spacing: -0.09em;
 }
 
 h2 {
@@ -48,6 +48,11 @@ ul {
 
 li {
 	margin: .5rem 0;
+	padding-left: 1em;
+}
+
+li::marker {
+  color: #d4a66b; /* bullet color */
 }
 
 a {
@@ -63,4 +68,32 @@ article {
 	padding: 2rem .5rem;
 	margin: auto;
 	background-size: cover;
+	text-align: justify;
+}
+
+.button {
+	flex-grow: 1;
+	margin: 10px;
+	padding: .75rem;
+	font-family: inherit;
+	font-weight: inherit;
+	font-size: inherit;
+	border-radius: 5px;
+	border: none;
+	transition: transform .3s ease-out;
+	background-color: #d4a66b;
+	color: #332d24;
+	text-decoration: none;
+	text-align: center;
+}
+
+.button:hover {
+	transform: scale(1.05);
+}
+
+.button-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin: 0 -10px;
 }
