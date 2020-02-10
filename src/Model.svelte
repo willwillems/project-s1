@@ -13,11 +13,10 @@
 
   let renderCanvas;
 
-  var perspectiveCamera, orthographicCamera, controls, scene, renderer, stats;
+  var angle = 1;
+  var radius = 3; 
 
-  var params = {
-    orthographicCamera: false
-  };
+  var perspectiveCamera, controls, scene, renderer, stats;
 
   var frustumSize = 400;
 
@@ -32,9 +31,6 @@
 
     perspectiveCamera = new THREE.PerspectiveCamera( 35, window.innerWidth / (window.innerHeight * heightRatio), 1, 15 );
     perspectiveCamera.position.set( 0, 0, 3 );
-
-    orthographicCamera = new THREE.OrthographicCamera( frustumSize * aspect / - 2, frustumSize * aspect / 2, frustumSize / 2, frustumSize / - 2, 1, 1000 );
-    orthographicCamera.position.z = 500;
 
     // world
 
@@ -112,12 +108,6 @@
     perspectiveCamera.aspect = aspect;
     perspectiveCamera.updateProjectionMatrix();
 
-    orthographicCamera.left = - frustumSize * aspect / 2;
-    orthographicCamera.right = frustumSize * aspect / 2;
-    orthographicCamera.top = frustumSize / 2;
-    orthographicCamera.bottom = - frustumSize / 2;
-    orthographicCamera.updateProjectionMatrix();
-
     renderer.setSize( window.innerWidth, (window.innerHeight * heightRatio) );
 
     controls.handleResize();
@@ -125,6 +115,9 @@
   }
 
   function animate() {
+    perspectiveCamera.position.x = radius * Math.cos( angle );  
+    perspectiveCamera.position.z = radius * Math.sin( angle );
+    angle += 0.001;
 
     requestAnimationFrame( animate );
 
@@ -136,7 +129,7 @@
 
   function render() {
 
-    var camera = ( params.orthographicCamera ) ? orthographicCamera : perspectiveCamera;
+    var camera = perspectiveCamera;
 
     renderer.render( scene, camera );
 
