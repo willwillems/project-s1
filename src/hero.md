@@ -12,6 +12,8 @@ The S4 is using 74HC595 and 74HC165 chips to interface with the LED's and button
 
 Not everything is working perfectly, the FX section unfortunately needs a custom PCB and not everything has been completely figured out but the majority of the work has been done. If you want to chat about this, join us in the DJTT thread (link below) and if you're interested in the technical aspects have a look at the docs on Github (link below).
 
+Want to stay up-to-date? Shoot me an email or better comment on DJTT and you'll get an email when something new gets posted. 
+
 Cheers!
 
 Will
@@ -19,3 +21,4 @@ Will
 ## Links
 - [DJTT Thread](https://forum.djtechtools.com/showthread.php?t=96697)
 - [Github](https://github.com/NickolasBoyer/KontrolS1)
+- [Contact](mailto:s1@willwillems.com)
