@@ -44,11 +44,11 @@ p {
 
 ul {
 	list-style: square;
+	padding-left: 1em;
 }
 
 li {
 	margin: .5rem 0;
-	padding-left: 1em;
 }
 
 li::marker {
