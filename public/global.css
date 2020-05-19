@@ -107,3 +107,8 @@ article {
 	flex-wrap: wrap;
 	margin: 0 -10px;
 }
+
+#logo {
+	height: 5rem;
+	margin-bottom: .5rem;
+}
