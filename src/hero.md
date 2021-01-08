@@ -20,5 +20,5 @@ Will
 
 ## Links
 - [DJTT Thread](https://forum.djtechtools.com/showthread.php?t=96697)
-- [Github](https://github.com/NickolasBoyer/KontrolS1)
+- [Github](https://github.com/willwillems/KontrolS1)
 - [Contact](mailto:s1@willwillems.com)
